@@ -2,7 +2,7 @@
   "name": "express-postgres-prisma",
   "version": "1.0.0",
   "description": "This is a Starter template for Expressjs with PostgreSQL and Prisma",
-  "main": "index.js",
+  "main": "api/server.js",
   "keywords": [
     "javascript",
     "nodejs",
