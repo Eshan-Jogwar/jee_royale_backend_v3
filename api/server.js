@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // Start the server
-const PORT = 142;
+const PORT = process.env.PORT ||  142;
 
 // Routes
 app.post("/signupuser", async (req, res) => {

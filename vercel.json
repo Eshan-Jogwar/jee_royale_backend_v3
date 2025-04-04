@@ -2,14 +2,22 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/index.js",
+      "src": "api/*.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "api/server.js"
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
     }
-  ]
+  ],
+  "functions": {
+    "api/index.js": {
+      "runtime": "vercel-node@18"
+    }
+  },
+  "env": {
+    "DATABASE_URL": "@postgresql://neondb_owner:npg_4mtqwrlxnJ5V@ep-shiny-sound-a1iy6jr8-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&pgbouncer=true"
+  }
 }
